@@ -1,0 +1,29 @@
+syntax = "proto3";
+import "google/protobuf/struct.proto";
+import "google/protobuf/timestamp.proto";
+
+service userActions {
+  rpc createUser(User) returns (APIResponse);
+  rpc getUserByID(UserByIDResponse) returns (UserByIDResponse);
+  rpc getAllUsers(ListOfUserResponse) returns (ListOfUserResponse);
+}
+
+message User {
+  int32 id = 1;
+  string firstName = 2;
+  string lastName = 3;
+  google.protobuf.Timestamp birthDate = 4;
+  string email = 5;
+}
+
+message APIResponse {
+  string response_message = 1;
+}
+
+message ListOfUserResponse {
+  string userResponseList = 1;
+}
+
+message UserByIDResponse {
+  string userByIDResponse = 1;
+}
