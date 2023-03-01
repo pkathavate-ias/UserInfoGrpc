@@ -12,9 +12,7 @@ import java.util.*;
 public class UserInfoClient {
 
     public static Map<Integer, List<String>> map = new HashMap<>();
-    public static Date dateOfBirth;
-
-    public static String birthDate, firstName, lastName, email;
+    public static String firstName, lastName, email;
 
     public static int ID;
     public static void main(String[] args) throws ParseException {
